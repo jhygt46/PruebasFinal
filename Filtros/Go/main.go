@@ -119,7 +119,6 @@ func (h *MyHandler) HandleFastHTTP(ctx *fasthttp.RequestCtx) {
 
 			var Id uint32 = Param(ctx.QueryArgs().Peek("p"))
 			ctx.SetBody(h.SearchMemFiltro(Id))
-			fmt.Println("busqueda1")
 
 		case "/busqueda2":
 
@@ -130,7 +129,6 @@ func (h *MyHandler) HandleFastHTTP(ctx *fasthttp.RequestCtx) {
 				val, _ := h.Db.Get(Uint32_4Bytes(Id))
 				ctx.SetBody(val)
 			}
-			fmt.Println("busqueda2")
 
 		case "/stats":
 			fmt.Fprintf(ctx, "Stats")
