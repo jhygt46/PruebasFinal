@@ -35,10 +35,10 @@ func main() {
 	var port string
 	var dbname string
 	if runtime.GOOS == "windows" {
-		port = ":81"
+		port = ":82"
 		dbname = "C:/Diego/AllinApp/Go/Bases/BaseCompleto/LedisDB/01"
 	} else {
-		port = ":81"
+		port = ":82"
 		dbname = "/var/LedisDB/01"
 	}
 
