@@ -38,7 +38,7 @@ func main() {
 		port = ":81"
 		dbname = "C:/Diego/AllinApp/Go/Bases/BaseCompleto/LedisDB/01"
 	} else {
-		port = ":80"
+		port = ":81"
 		dbname = "/var/LedisDB/01"
 	}
 
