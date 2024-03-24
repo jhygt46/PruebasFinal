@@ -77,9 +77,10 @@ func main() {
 		}
 	}()
 
-	Server := &fasthttp.Server{Handler: handler.HandleFastHTTP, Logger: &silentLogger{}}
-	Server.ListenAndServe(port)
-
+	go func() {
+		Server := &fasthttp.Server{Handler: handler.HandleFastHTTP, Logger: &silentLogger{}}
+		Server.ListenAndServe(port)
+	}()
 	if err := run(con, handler, os.Stdout); err != nil {
 		fmt.Fprintf(os.Stderr, "%s\n", err)
 		os.Exit(1)
