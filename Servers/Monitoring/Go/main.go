@@ -20,7 +20,7 @@ func main() {
 
 	command := os.Args[1]
 	if command == "disk" {
-		n, err := DirSize("C:")
+		n, err := DirSize("/var/PruebasFinal")
 		if err == nil {
 			fmt.Println(n)
 		}
